@@ -1,0 +1,643 @@
+{
+ "driver-hire": {
+  "title": "Driver hire",
+  "h1": "Driver hire for logistics and transport",
+  "lead": "Temporary cover and permanent recruitment for HGV, van and other driving roles. Tell us what you need and we’ll confirm which drivers we can supply. [CONFIRM offer]",
+  "cta": "Request drivers",
+  "chref": "/contact",
+  "secs": [
+   {
+    "kind": "bullets",
+    "heading": "Driver categories we can supply",
+    "body": [
+     "HGV Class 1 (C+E) [CONFIRM]",
+     "HGV Class 2 (C) [CONFIRM]",
+     "7.5-tonne and van drivers [CONFIRM]",
+     "Other categories, for example forklift or warehouse drivers [CONFIRM if offered]"
+    ]
+   },
+   {
+    "kind": "bullets",
+    "heading": "Licence requirements",
+    "body": [
+     "Valid category entitlement for the vehicle",
+     "Driver CPC and digital tachograph card where the role needs them [CONFIRM what we check]",
+     "Licence check process: [CONFIRM how and when licences are checked]"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Experience",
+    "body": "[CONFIRM minimum experience levels we place, for example newly qualified drivers and experienced drivers, and how experience is verified.]"
+   },
+   {
+    "kind": "bullets",
+    "heading": "Shift patterns",
+    "body": [
+     "Days, nights and weekends [CONFIRM]",
+     "Short-notice and ad hoc cover [CONFIRM lead times]",
+     "Regular or contract shifts [CONFIRM]"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Temporary cover",
+    "body": "Cover for busy periods, absences and short-notice shifts. [CONFIRM minimum booking length and how timesheets work.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Permanent recruitment",
+    "body": "Finding drivers to join your team long term. Only published if Sterling Workcare offers it. [CONFIRM process, fees and any trial period.]"
+   },
+   {
+    "kind": "confirm",
+    "heading": null,
+    "body": "Driver checks (licence, CPC, right to work, references and so on): only list the checks Sterling Workcare really carries out. Nothing is claimed here until the owner confirms it and can evidence it."
+   }
+  ],
+  "aside": [
+   {
+    "label": "Service",
+    "value": "Temporary and permanent drivers"
+   },
+   {
+    "label": "Coverage",
+    "value": "[CONFIRM SERVICE AREA]"
+   },
+   {
+    "label": "Licence categories",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Shift patterns",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Response time",
+    "value": "[CONFIRM]"
+   }
+  ],
+  "asideTitle": "At a glance",
+  "faqs": [
+   {
+    "q": "Is this agency work or permanent recruitment?",
+    "a": "[CONFIRM: temporary supply, permanent placement, or both. These are different services.]"
+   },
+   {
+    "q": "Can you cover shifts at short notice?",
+    "a": "[CONFIRM real lead times. No promises until the owner agrees them.]"
+   },
+   {
+    "q": "What do I need to provide for the driver?",
+    "a": "[CONFIRM site induction, vehicle handover and paperwork expectations.]"
+   }
+  ],
+  "final": [
+   "Need drivers?",
+   "Tell us what you need and we’ll confirm what we can do.",
+   "/contact",
+   "Request drivers"
+  ],
+  "asideCta": "Request drivers",
+  "asideHref": "/contact"
+ },
+ "care-workers": {
+  "title": "Care workers",
+  "h1": "Care workers for care homes and home care",
+  "lead": "Care assistants and healthcare assistants for your service. Tell us the setting, shift and experience you need and we’ll confirm who we can supply. [CONFIRM offer]",
+  "cta": "Request care staff",
+  "chref": "/contact",
+  "secs": [
+   {
+    "kind": "bullets",
+    "heading": "Roles we can supply",
+    "body": [
+     "Care assistants [CONFIRM]",
+     "Healthcare assistants [CONFIRM]",
+     "Senior care assistants [CONFIRM if offered]",
+     "Settings, for example care homes, home care and hospitals [CONFIRM which]"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Relevant experience",
+    "body": "[CONFIRM the levels of experience we place, for example no experience with training, experienced carers, and how experience is checked.]"
+   },
+   {
+    "kind": "bullets",
+    "heading": "Training",
+    "body": [
+     "Mandatory training, for example moving and handling, safeguarding, infection control and first aid [CONFIRM what is completed and by whom]",
+     "Specialist training, for example dementia care and medication [CONFIRM]",
+     "How training records are shared with the employer [CONFIRM]"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Availability",
+    "body": "[CONFIRM shifts covered: days, nights, weekends, bank holidays, short-notice and regular placements.]"
+   },
+   {
+    "kind": "bullets",
+    "heading": "Required checks",
+    "body": [
+     "Right to work in the UK",
+     "Enhanced DBS check, where the role needs one [CONFIRM level and process]",
+     "References and employment history [CONFIRM]",
+     "Registration or professional checks where they apply [CONFIRM]"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Role-specific checks",
+    "body": "Candidate checks and suitability assessments depend on the role and the employer. We don’t say every candidate is fully vetted. [CONFIRM what is checked for each role.]"
+   },
+   {
+    "kind": "confirm",
+    "heading": null,
+    "body": "Regulatory position: supplying workers to care providers is generally different from running a regulated care service. [CONFIRM whether Sterling Workcare supplies workers to care homes and other providers only, or also provides care directly to people in their own homes, and check the CQC registration guidance.] Never publish “CQC registered”, “fully compliant”, “24/7 availability” or “all vetted” unless it is accurate and can be proved."
+   }
+  ],
+  "aside": [
+   {
+    "label": "Service",
+    "value": "Care assistants and healthcare assistants"
+   },
+   {
+    "label": "Coverage",
+    "value": "[CONFIRM SERVICE AREA]"
+   },
+   {
+    "label": "Settings",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Availability",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Response time",
+    "value": "[CONFIRM]"
+   }
+  ],
+  "asideTitle": "At a glance",
+  "faqs": [
+   {
+    "q": "Do your care workers have DBS checks?",
+    "a": "[CONFIRM before publishing. Do not state this until the owner confirms it.]"
+   },
+   {
+    "q": "Can you cover short-notice shifts?",
+    "a": "[CONFIRM real lead times.]"
+   },
+   {
+    "q": "Can I request the same care worker again?",
+    "a": "[CONFIRM how repeat requests are handled.]"
+   }
+  ],
+  "final": [
+   "Need care staff?",
+   "Send the details and we’ll confirm what we can supply.",
+   "/contact",
+   "Request care staff"
+  ],
+  "asideCta": "Request care staff",
+  "asideHref": "/contact"
+ },
+ "support-workers": {
+  "title": "Support workers",
+  "h1": "Support workers across supported living and residential services",
+  "lead": "Support workers, senior support workers and team leaders for supported living, residential and community services. [CONFIRM offer]",
+  "cta": "Request support staff",
+  "chref": "/contact",
+  "secs": [
+   {
+    "kind": "bullets",
+    "heading": "Services we can staff",
+    "body": [
+     "Supported living [CONFIRM]",
+     "Residential support [CONFIRM]",
+     "Community support [CONFIRM]"
+    ]
+   },
+   {
+    "kind": "bullets",
+    "heading": "Roles we can supply",
+    "body": [
+     "Support workers [CONFIRM]",
+     "Senior support workers [CONFIRM]",
+     "Team leaders [CONFIRM]"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Experience and training",
+    "body": "[CONFIRM the experience and training expected for each level, for example learning disabilities, autism, mental health and positive behaviour support.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Shifts and availability",
+    "body": "[CONFIRM shifts covered: days, nights, sleep-ins, weekends and short-notice or regular placements.]"
+   },
+   {
+    "kind": "bullets",
+    "heading": "Required checks",
+    "body": [
+     "Right to work in the UK",
+     "Enhanced DBS check, where the role needs one [CONFIRM level and process]",
+     "References and employment history [CONFIRM]"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Role-specific checks",
+    "body": "Checks and suitability assessments depend on the role. We don’t say every candidate is fully vetted. [CONFIRM what is checked for each role.]"
+   },
+   {
+    "kind": "confirm",
+    "heading": null,
+    "body": "Supported living and residential support are regulated settings. No claim about checks, training, compliance or regulatory status is published until Sterling Workcare confirms it and can show evidence."
+   }
+  ],
+  "aside": [
+   {
+    "label": "Service",
+    "value": "Support workers and team leaders"
+   },
+   {
+    "label": "Coverage",
+    "value": "[CONFIRM SERVICE AREA]"
+   },
+   {
+    "label": "Settings",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Availability",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Response time",
+    "value": "[CONFIRM]"
+   }
+  ],
+  "asideTitle": "At a glance",
+  "faqs": [
+   {
+    "q": "Do you supply team leaders and senior support workers?",
+    "a": "[CONFIRM which levels are offered.]"
+   },
+   {
+    "q": "Can you supply staff for sleep-in shifts?",
+    "a": "[CONFIRM.]"
+   },
+   {
+    "q": "How do you match staff to a service?",
+    "a": "[CONFIRM matching process.]"
+   }
+  ],
+  "final": [
+   "Need support workers?",
+   "Send the details and we’ll confirm what we can supply.",
+   "/contact",
+   "Request support staff"
+  ],
+  "asideCta": "Request support staff",
+  "asideHref": "/contact"
+ },
+ "employers": {
+  "title": "Employer services",
+  "h1": "Employer services: how to request staff",
+  "lead": "One route for driver, care and support staff. Tell us what you need and our team will review the request and confirm availability.",
+  "cta": "Request staff",
+  "chref": "/contact",
+  "secs": [
+   {
+    "kind": "steps",
+    "heading": "How to request staff",
+    "body": [
+     "Send your request through the enquiry form: sector, role, location, start date and shifts.",
+     "A member of the team reviews it.",
+     "We confirm what we can supply. [CONFIRM how availability is confirmed]",
+     "Staff start on the agreed date."
+    ]
+   },
+   {
+    "kind": "bullets",
+    "heading": "The staff request form asks for",
+    "body": [
+     "Organisation type: care home or care provider, supported living provider, logistics or delivery company, other employer",
+     "Staff required: drivers, care workers, support workers, senior support workers or team leaders",
+     "Number of staff: 1–5, 6–10 or 10+",
+     "Requirement: temporary shifts, permanent recruitment or ongoing staff cover",
+     "Location or postcode"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "Service areas",
+    "body": "Proposed starting area: Birmingham and the West Midlands. [CONFIRM SERVICE AREA. Other areas are listed only once you can cover them.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Response process",
+    "body": "[CONFIRM who responds, how, and how quickly. No response time is promised until the owner agrees one.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Onboarding",
+    "body": "[CONFIRM what happens at the start: site induction, introductions, paperwork, timesheets and how staff are briefed.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Rates",
+    "body": "Rates depend on the role, sector, location and shift pattern. [CONFIRM how rates are discussed and agreed. No prices are published here.]"
+   }
+  ],
+  "aside": [
+   {
+    "label": "Sectors",
+    "value": "Driver hire, care workers, support workers"
+   },
+   {
+    "label": "Coverage",
+    "value": "Birmingham and the West Midlands [CONFIRM]"
+   },
+   {
+    "label": "Response time",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Rates",
+    "value": "Discussed per request [CONFIRM]"
+   },
+   {
+    "label": "Phone",
+    "value": "[CONFIRM PHONE]"
+   }
+  ],
+  "asideTitle": "At a glance",
+  "faqs": [
+   {
+    "q": "What should I include in a request?",
+    "a": "The sector, role, number of staff, location, start date and shifts, plus anything specific about the site or the people being supported."
+   },
+   {
+    "q": "Can I request staff in more than one sector?",
+    "a": "[CONFIRM.]"
+   },
+   {
+    "q": "Is there a contract or minimum booking?",
+    "a": "[CONFIRM terms with the owner.]"
+   }
+  ],
+  "final": [
+   "Ready to request staff?",
+   "Send the details and we’ll confirm what we can supply.",
+   "/contact",
+   "Request staff"
+  ],
+  "asideCta": "Request staff",
+  "asideHref": "/contact"
+ },
+ "candidates": {
+  "title": "Candidate services",
+  "h1": "Candidate services: register with Sterling Workcare",
+  "lead": "Looking for driving, care or support work? Register your details and we’ll contact you when a role suits you. [CONFIRM how roles are offered]",
+  "cta": "Register now",
+  "chref": "/jobs#register",
+  "secs": [
+   {
+    "kind": "steps",
+    "heading": "How to register",
+    "body": [
+     "Choose your sector: driving, care or support work.",
+     "Fill in the short registration form.",
+     "The team reviews your details. [CONFIRM process]",
+     "If a role fits, we contact you."
+    ]
+   },
+   {
+    "kind": "bullets",
+    "heading": "Documents you may need",
+    "body": [
+     "Proof of right to work in the UK",
+     "Photo ID and proof of address [CONFIRM]",
+     "Driving licence and Driver CPC, for driving roles [CONFIRM]",
+     "Certificates and training records, for care and support roles [CONFIRM]",
+     "References and employment history [CONFIRM]",
+     "DBS check, where the role needs one [CONFIRM process and who pays]"
+    ]
+   },
+   {
+    "kind": "bullets",
+    "heading": "The registration form asks for",
+    "body": [
+     "Full name, phone and email",
+     "Preferred job role and location",
+     "Relevant experience and qualifications",
+     "Driving licence category, for driving work",
+     "Availability and preferred shifts",
+     "CV upload, if wanted [CONFIRM]",
+     "Confirmation that you have read the privacy notice"
+    ]
+   },
+   {
+    "kind": "p",
+    "heading": "What we don’t ask for online",
+    "body": "We don’t collect passport details, National Insurance numbers, bank details or sensitive health information through the website form. [CONFIRM: that information is collected later through a secure onboarding process.]"
+   },
+   {
+    "kind": "p",
+    "heading": "How shifts are offered",
+    "body": "[CONFIRM how shifts reach you: phone, text, email or an app; how far ahead; and how you accept or decline.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Payroll arrangements",
+    "body": "[CONFIRM how pay works: employment status, pay frequency, timesheets, holiday pay and any deductions. No pay information is published until confirmed.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Contact details",
+    "body": "Phone: [CONFIRM PHONE]. Email: [CONFIRM EMAIL]. You can also use the enquiry form."
+   }
+  ],
+  "aside": [
+   {
+    "label": "Sectors",
+    "value": "Driving, care and support work"
+   },
+   {
+    "label": "Cost to register",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Areas",
+    "value": "Birmingham and the West Midlands [CONFIRM]"
+   },
+   {
+    "label": "Response time",
+    "value": "[CONFIRM]"
+   },
+   {
+    "label": "Phone",
+    "value": "[CONFIRM PHONE]"
+   }
+  ],
+  "asideTitle": "At a glance",
+  "faqs": [
+   {
+    "q": "Is it free to register?",
+    "a": "[CONFIRM before publishing. Do not state this until the owner agrees.]"
+   },
+   {
+    "q": "Do I need experience?",
+    "a": "[CONFIRM by sector.]"
+   },
+   {
+    "q": "How soon will I hear from you?",
+    "a": "[CONFIRM a real response time.]"
+   }
+  ],
+  "final": [
+   "Ready to register?",
+   "Choose your sector and register your details.",
+   "/jobs#register",
+   "Register now"
+  ],
+  "asideCta": "Register now",
+  "asideHref": "/jobs#register"
+ },
+ "faqs": {
+  "title": "FAQs",
+  "h1": "Frequently asked questions",
+  "lead": "Answers for employers and candidates. Every answer is a placeholder until the owner confirms it.",
+  "cta": "Contact the team",
+  "chref": "/contact",
+  "secs": [
+   {
+    "kind": "p",
+    "heading": "For employers: how do I request staff?",
+    "body": "Use the staff request form on the Contact page and tell us the sector, role, number of staff, requirement and location. [CONFIRM process]"
+   },
+   {
+    "kind": "p",
+    "heading": "For employers: which areas do you cover?",
+    "body": "[CONFIRM SERVICE AREA. Proposed starting area: Birmingham and the West Midlands.]"
+   },
+   {
+    "kind": "p",
+    "heading": "For employers: are your staff checked?",
+    "body": "Checks depend on the role. [CONFIRM what is checked for each sector before publishing anything here.]"
+   },
+   {
+    "kind": "p",
+    "heading": "For employers: how are rates agreed?",
+    "body": "Rates are discussed per request. [CONFIRM how rates, cancellation and payment terms work.]"
+   },
+   {
+    "kind": "p",
+    "heading": "For candidates: how do I register?",
+    "body": "Complete the registration form on the Candidate services page. [CONFIRM process]"
+   },
+   {
+    "kind": "p",
+    "heading": "For candidates: what documents will I need?",
+    "body": "[CONFIRM list by sector.]"
+   },
+   {
+    "kind": "p",
+    "heading": "For candidates: how and when am I paid?",
+    "body": "[CONFIRM payroll arrangements.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Who can I speak to about a concern?",
+    "body": "See Complaints and safeguarding. [CONFIRM contact route]"
+   }
+  ],
+  "aside": [
+   {
+    "label": "Phone",
+    "value": "[CONFIRM PHONE]"
+   },
+   {
+    "label": "Email",
+    "value": "[CONFIRM EMAIL]"
+   },
+   {
+    "label": "Complaints",
+    "value": "Complaints and safeguarding page"
+   }
+  ],
+  "asideTitle": "Need more help?",
+  "faqs": [
+   {
+    "q": "Is this page final?",
+    "a": "No. Replace each placeholder with an answer the owner has approved."
+   }
+  ],
+  "final": [
+   "Still have a question?",
+   "Send us a message and we’ll reply.",
+   "/contact",
+   "Contact the team"
+  ],
+  "asideCta": "Contact the team",
+  "asideHref": "/contact"
+ },
+ "complaints": {
+  "title": "Complaints and safeguarding",
+  "h1": "Complaints and safeguarding",
+  "lead": "How to raise a concern about our service, our staff or someone’s safety. Especially important for care and support staffing. [CONFIRM process]",
+  "cta": "Raise a concern",
+  "chref": "/contact",
+  "secs": [
+   {
+    "kind": "p",
+    "heading": "Making a complaint",
+    "body": "[CONFIRM: who receives complaints, how to make one, how it is acknowledged and investigated, and expected timescales. Do not publish timescales until agreed.]"
+   },
+   {
+    "kind": "p",
+    "heading": "Safeguarding concerns",
+    "body": "[CONFIRM: safeguarding lead, how a concern is raised, what happens next, and who to contact in an emergency. If someone is in immediate danger, call 999.]"
+   },
+   {
+    "kind": "confirm",
+    "heading": null,
+    "body": "A qualified adviser should review this page, the safeguarding policy and the complaints procedure before launch. Nothing here is a statement of policy until the owner approves it."
+   }
+  ],
+  "aside": [
+   {
+    "label": "Contact",
+    "value": "[CONFIRM EMAIL]"
+   },
+   {
+    "label": "Phone",
+    "value": "[CONFIRM PHONE]"
+   },
+   {
+    "label": "Out of hours",
+    "value": "[CONFIRM]"
+   }
+  ],
+  "asideTitle": "Contact",
+  "faqs": [
+   {
+    "q": "Who sees my complaint?",
+    "a": "[CONFIRM.]"
+   }
+  ],
+  "final": [
+   "Need to raise a concern?",
+   "Contact the team and tell us what happened.",
+   "/contact",
+   "Contact the team"
+  ],
+  "asideCta": "Raise a concern",
+  "asideHref": "/contact"
+ }
+}

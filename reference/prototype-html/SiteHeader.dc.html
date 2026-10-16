@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Site header</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,700&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<header style="background:#ffffff;border-bottom:1px solid #d9e0e8;font-family:'Barlow',system-ui,sans-serif">
+<div class="hide-sm" style="background:#0e2238;color:#c9d6e6;font-size:14px">
+<div style="max-width:1200px;margin:0 auto;padding:8px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px">
+<span>Driver, care and support staffing</span>
+<span style="display:flex;flex-wrap:wrap;gap:8px 24px"><a href="Candidates.dc.html" style="color:#ffffff;font-weight:500">Register for work</a><span>Phone: [CONFIRM PHONE]</span></span>
+</div>
+</div>
+<div style="max-width:1200px;margin:0 auto;padding:12px 24px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:16px">
+<a href="Main.dc.html" style="display:flex;align-items:center;gap:12px;text-decoration:none" aria-label="Sterling Workcare Ltd, home">
+<img src="/_blob/50dcbe04e61fa5a5f4aaafc15a33f6b0" alt="" style="height:38px;width:auto;display:block">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-style:italic;font-size:22px;letter-spacing:.02em;color:#35629a;text-transform:uppercase">Sterling Workcare</span>
+</a>
+<nav aria-label="Main" class="nav-links" style="display:flex;gap:28px;align-items:center">
+<sc-for list="{{links}}" as="item" hint-placeholder-count="6">
+<a class="nav-link" href="{{item.href}}" aria-current="{{item.aria}}" style="color:#0e2238;text-decoration:none;font-weight:500;font-size:16px;padding:6px 0;border-bottom:{{item.border}}">{{item.label}}</a>
+</sc-for>
+</nav>
+<div style="display:flex;align-items:center;gap:12px">
+<a class="btn" href="Contact.dc.html" style="background:#2f6aa8;color:#ffffff;font-weight:600;font-size:16px;padding:12px 20px;border-radius:6px;text-decoration:none"><span class="hide-sm">Hire staff</span><span class="show-sm" style="display:none">Enquire</span></a>
+<button class="show-sm" type="button" onClick="{{toggle}}" aria-expanded="{{expanded}}" aria-controls="mobile-nav" aria-label="Menu" style="display:none;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #9aa9ba;border-radius:6px;background:#ffffff;cursor:pointer;color:#0e2238;padding:0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{iconPath}}"/></svg>
+</button>
+</div>
+</div>
+<sc-if value="{{open}}" hint-placeholder-val="{{false}}">
+<nav id="mobile-nav" aria-label="Mobile" style="border-top:1px solid #d9e0e8;background:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:8px 24px 16px;box-sizing:border-box;display:flex;flex-direction:column">
+<a href="Main.dc.html" style="color:#0e2238;text-decoration:none;font-weight:500;font-size:18px;padding:14px 0;border-bottom:1px solid #e4e9ef">Home</a>
+<sc-for list="{{links}}" as="item" hint-placeholder-count="6">
+<a href="{{item.href}}" aria-current="{{item.aria}}" style="color:#0e2238;text-decoration:none;font-weight:500;font-size:18px;padding:14px 0;border-bottom:1px solid #e4e9ef">{{item.label}}</a>
+</sc-for>
+</div>
+</nav>
+</sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"current":{"editor":null,"default":"none"},"$preview":{"width":1440,"height":112}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
+  renderVals() {
+    const cur = this.props.current ?? 'none';
+    const defs = [
+      ['Services', 'Services.dc.html', 'services'],
+      ['Employers', 'Employers.dc.html', 'employers'],
+      ['Candidates', 'Candidates.dc.html', 'candidates'],
+      ['Jobs', 'Drivers.dc.html', 'drivers'],
+      ['About', 'About.dc.html', 'about'],
+      ['Contact', 'Contact.dc.html', 'contact']
+    ];
+    const links = defs.map(([label, href, key]) => ({
+      label,
+      href,
+      aria: key === cur ? 'page' : undefined,
+      border: key === cur ? '2px solid #2f6aa8' : '2px solid transparent'
+    }));
+    return {
+      links,
+      open: this.state.open,
+      expanded: this.state.open ? 'true' : 'false',
+      iconPath: this.state.open ? 'M18 6 6 18M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16',
+      toggle: () => this.setState({ open: !this.state.open })
+    };
+  }
+}
+</script>
+</body>
+</html>

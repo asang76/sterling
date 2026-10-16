@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Jobs</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&amp;family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,700&amp;display=swap">
+<style>
+body{margin:0;font-family:'Barlow',system-ui,sans-serif;color:#44566a;background:#f3f5f8}
+a{color:#2f6aa8}
+a:hover{color:#0e2238}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8fb8e6;outline-offset:2px}
+.nav-link:hover{color:#2f6aa8 !important;text-decoration:underline !important}
+.btn{text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+@media (max-width:860px){.nav-links{display:none !important}.show-sm{display:inline-flex !important}.hide-sm{display:none !important}}
+@media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s ease}}
+</style>
+</helmet>
+<div style="width:100%;box-sizing:border-box">
+
+<dc-import name="SiteHeader" current="drivers" hint-size="100%,112px"></dc-import>
+
+<main>
+<section style="background:#0e2238;color:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:56px 24px 48px;box-sizing:border-box">
+<nav aria-label="Breadcrumb" style="font-size:15px;margin-bottom:18px;color:#c9d6e6"><a href="Main.dc.html" style="color:#c9d6e6">Home</a> / <span>Jobs</span></nav>
+<h1 style="margin:0 0 14px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(36px,5.5vw,48px);line-height:1.08;color:#ffffff">Find work in driving, care and support</h1>
+<p style="margin:0 0 28px;font-size:20px;line-height:1.55;color:#c9d6e6;max-width:700px">Search current roles, or register so we can contact you when something suits your skills and area. [CONFIRM how roles are offered]</p>
+
+<form role="search" aria-label="Search driving jobs" onSubmit="{{onSearch}}" style="background:#ffffff;border-radius:10px;padding:20px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;color:#44566a">
+<div style="flex:2 1 200px;display:flex;flex-direction:column;gap:6px"><label for="s-key" style="font-weight:600;font-size:15px;color:#0e2238">Job title or keyword</label><input id="s-key" name="keyword" type="text" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border:1px solid #9aa9ba;border-radius:6px;color:#0e2238;width:100%"></div>
+<div style="flex:2 1 180px;display:flex;flex-direction:column;gap:6px"><label for="s-loc" style="font-weight:600;font-size:15px;color:#0e2238">Town or postcode</label><input id="s-loc" name="location" type="text" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border:1px solid #9aa9ba;border-radius:6px;color:#0e2238;width:100%"></div>
+<div style="flex:1 1 150px;display:flex;flex-direction:column;gap:6px"><label for="s-sec" style="font-weight:600;font-size:15px;color:#0e2238">Sector</label><select id="s-sec" name="sector" style="height:48px;box-sizing:border-box;padding:0 10px;font:inherit;font-size:16px;border:1px solid #9aa9ba;border-radius:6px;color:#0e2238;width:100%;background:#ffffff"><option value="">Any</option><option>Driving</option><option>Care</option><option>Support work</option></select></div>
+<div style="flex:1 1 170px;display:flex;flex-direction:column;gap:6px"><label for="s-lic" style="font-weight:600;font-size:15px;color:#0e2238">Licence (drivers)</label>
+<select id="s-lic" name="licence" style="height:48px;box-sizing:border-box;padding:0 10px;font:inherit;font-size:16px;border:1px solid #9aa9ba;border-radius:6px;color:#0e2238;width:100%;background:#ffffff">
+<option value="">Any</option>
+<option>HGV Class 1 (C+E)</option>
+<option>HGV Class 2 (C)</option>
+<option>7.5-tonne</option>
+<option>Van</option>
+</select></div>
+<div style="flex:1 1 150px;display:flex;flex-direction:column;gap:6px"><label for="s-type" style="font-weight:600;font-size:15px;color:#0e2238">Contract</label>
+<select id="s-type" name="contract" style="height:48px;box-sizing:border-box;padding:0 10px;font:inherit;font-size:16px;border:1px solid #9aa9ba;border-radius:6px;color:#0e2238;width:100%;background:#ffffff">
+<option value="">Any</option>
+<option>Temporary</option>
+<option>Permanent</option>
+</select></div>
+<button type="submit" style="flex:0 0 auto;height:48px;padding:0 28px;border:0;border-radius:6px;background:#2f6aa8;color:#ffffff;font:inherit;font-weight:600;font-size:17px;cursor:pointer">Search jobs</button>
+</form>
+<p style="margin:12px 0 0;font-size:14px;color:#c9d6e6">Categories and contract types: [CONFIRM what Sterling Workcare offers]</p>
+</div>
+</section>
+
+<section style="background:#f3f5f8">
+<div style="max-width:1200px;margin:0 auto;padding:56px 24px 24px;box-sizing:border-box">
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:18px">
+<h2 style="margin:0;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.5vw,34px);color:#0e2238">Jobs</h2>
+<p role="status" style="margin:0;font-size:16px">{{resultCount}}</p>
+</div>
+
+<sc-if value="{{showEmpty}}" hint-placeholder-val="{{true}}">
+<div style="background:#ffffff;border:1px solid #d9e0e8;border-radius:8px;padding:32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:10px">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+<h3 style="margin:0;font-size:22px;color:#0e2238;font-weight:600">No open roles listed right now</h3>
+<p style="margin:0;font-size:17px;line-height:1.6">We only show real, current vacancies. Register your details and we’ll be in touch when a suitable role comes up.</p>
+</div>
+<a class="btn" href="#register" style="background:#2f6aa8;color:#ffffff;font-weight:600;font-size:17px;padding:14px 24px;border-radius:6px">Register your interest</a>
+</div>
+</sc-if>
+
+<sc-if value="{{showLayout}}" hint-placeholder-val="{{false}}">
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+<sc-for list="{{jobs}}" as="job" hint-placeholder-count="3">
+<li style="background:#ffffff;border:2px dashed #9aa9ba;border-radius:8px;padding:22px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-size:22px;color:#0e2238;font-weight:600">[Job title]</h3>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-size:16px;color:#44566a">
+<span style="display:inline-flex;align-items:center;gap:6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>[Location]</span>
+<span>[Contract type]</span>
+<span>[Licence category]</span>
+<span>[Pay rate]</span>
+<span>[Posted date]</span>
+</div>
+<p style="margin:0;font-size:15px;line-height:1.5">[Short description of the role and any requirements.]</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="btn" href="#register" style="background:#2f6aa8;color:#ffffff;font-weight:600;font-size:16px;padding:12px 22px;border-radius:6px">Apply</a>
+</div>
+</li>
+</sc-for>
+</ul>
+<p style="margin:16px 0 0;font-size:14px;line-height:1.5;color:#5a4300"><span style="display:inline-block;background:#fff4d6;font-size:12px;font-weight:600;padding:4px 10px;border-radius:4px;margin-right:8px">Layout preview</span>Placeholder roles. Real vacancies get their own page with a stable link and a correct open or closed status.</p>
+</sc-if>
+
+<div style="margin-top:28px;border:2px dashed #9aa9ba;border-radius:8px;padding:16px 20px;background:#ffffff;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+<div style="font-weight:600;color:#0e2238;font-size:16px">Prototype only: preview results</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px" role="group" aria-label="Preview results state">
+<button type="button" onClick="{{setEmpty}}" aria-pressed="{{pEmpty}}" style="height:44px;padding:0 16px;border:1px solid #2f6aa8;border-radius:6px;background:#ffffff;color:#2f6aa8;font:inherit;font-weight:600;font-size:15px;cursor:pointer">No open roles</button>
+<button type="button" onClick="{{setLayout}}" aria-pressed="{{pLayout}}" style="height:44px;padding:0 16px;border:1px solid #2f6aa8;border-radius:6px;background:#ffffff;color:#2f6aa8;font:inherit;font-weight:600;font-size:15px;cursor:pointer">Roles layout</button>
+</div>
+</div>
+</div>
+</section>
+
+<section id="register" style="background:#f3f5f8">
+<div style="max-width:1200px;margin:0 auto;padding:48px 24px 72px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+
+<div style="flex:3 1 480px;min-width:0;display:flex;flex-direction:column;gap:36px">
+<div>
+<h2 style="margin:0 0 14px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.5vw,34px);color:#0e2238">What you’ll need</h2>
+<p style="margin:0;font-size:18px;line-height:1.65">[CONFIRM eligibility by sector: licence categories for drivers; experience, training and checks for care and support work. See <a href="Candidates.dc.html">Candidate services</a>. Only list what Sterling Workcare actually requires.]</p>
+</div>
+<div>
+<h2 style="margin:0 0 14px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.5vw,34px);color:#0e2238">What happens after you register</h2>
+<ol style="margin:0;padding-left:22px;font-size:18px;line-height:1.7;display:flex;flex-direction:column;gap:6px">
+<li>We receive your details.</li>
+<li>Someone from the team looks at your licence and location. [CONFIRM]</li>
+<li>If a role fits, we contact you. [CONFIRM timing and what comes next]</li>
+</ol>
+</div>
+<div style="border:2px dashed #9aa9ba;border-radius:8px;padding:22px;box-sizing:border-box;background:#ffffff">
+<span style="display:inline-block;background:#fff4d6;color:#5a4300;font-size:12px;font-weight:600;padding:4px 10px;border-radius:4px;margin-bottom:10px">To confirm</span>
+<p style="margin:0;font-size:17px;line-height:1.6">Driver accounts, job alerts and training (such as Driver CPC) are only added if Sterling Workcare offers them. Nothing is promised here yet.</p>
+</div>
+</div>
+
+<div style="flex:2 1 360px;min-width:0;background:#ffffff;border:1px solid #d9e0e8;border-radius:10px;padding:28px;box-sizing:border-box">
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<h2 style="margin:0 0 6px;font-family:'Barlow Semi Condensed',sans-serif;font-size:28px;color:#0e2238">Register for work</h2>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.5">Tell us the work you’re looking for.</p>
+<form onSubmit="{{onSubmit}}" style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-name" style="font-weight:600;font-size:15px;color:#0e2238">Full name</label><input id="d-name" name="name" type="text" required="" autocomplete="name" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-phone" style="font-weight:600;font-size:15px;color:#0e2238">Telephone</label><input id="d-phone" name="phone" type="tel" required="" autocomplete="tel" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-email" style="font-weight:600;font-size:15px;color:#0e2238">Email</label><input id="d-email" name="email" type="email" required="" autocomplete="email" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-role" style="font-weight:600;font-size:15px;color:#0e2238">Preferred job role</label><select id="d-role" name="role" required="" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba"><option value="">Choose one</option><option>Driver</option><option>Care worker</option><option>Healthcare assistant</option><option>Support worker</option><option>Senior support worker</option><option>Team leader</option></select><span style="font-size:14px">[CONFIRM roles offered]</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-post" style="font-weight:600;font-size:15px;color:#0e2238">Preferred location or postcode</label><input id="d-post" name="postcode" type="text" autocomplete="postal-code" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-exp" style="font-weight:600;font-size:15px;color:#0e2238">Relevant experience and qualifications</label><textarea id="d-exp" name="experience" rows="3" style="box-sizing:border-box;padding:12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba;resize:vertical"></textarea></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-lic" style="font-weight:600;font-size:15px;color:#0e2238">Driving licence category (driving work only)</label><select id="d-lic" name="licence" style="height:48px;box-sizing:border-box;padding:0 12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba"><option value="">Choose one</option><option>HGV Class 1 (C+E)</option><option>HGV Class 2 (C)</option><option>7.5-tonne</option><option>Van</option><option>Not applying for driving work</option></select><span style="font-size:14px">[CONFIRM categories]</span></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-avail" style="font-weight:600;font-size:15px;color:#0e2238">Availability and preferred shifts</label><textarea id="d-avail" name="availability" rows="2" style="box-sizing:border-box;padding:12px;font:inherit;font-size:16px;border-radius:6px;color:#0e2238;width:100%;background:#ffffff;border:1px solid #9aa9ba;resize:vertical"></textarea></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="d-cv" style="font-weight:600;font-size:15px;color:#0e2238">CV (optional)</label><input id="d-cv" name="cv" type="file" accept=".pdf,.doc,.docx" style="font:inherit;font-size:15px"><span style="font-size:14px">[CONFIRM whether CVs are wanted, plus allowed types, size limit and secure storage.]</span></div>
+<label style="display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5;color:#0e2238;min-height:44px"><input type="checkbox" name="privacy" required="" style="width:22px;height:22px;margin:2px 0 0;flex:none">I have read the <a href="Privacy.dc.html">privacy notice</a>.</label>
+<button type="submit" style="height:52px;border:0;border-radius:6px;background:#2f6aa8;color:#ffffff;font:inherit;font-weight:600;font-size:17px;cursor:pointer">Register</button>
+<p style="margin:0;font-size:14px;line-height:1.5">Please don’t send passport details, National Insurance numbers, bank details or health information here. We’ll ask for what’s needed later, through a secure process. [CONFIRM]</p>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div role="status" style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
+<span style="width:52px;height:52px;border-radius:50%;background:#e6eef7;display:flex;align-items:center;justify-content:center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>
+<h2 style="margin:0;font-family:'Barlow Semi Condensed',sans-serif;font-size:28px;color:#0e2238">Interest registered</h2>
+<p style="margin:0;font-size:16px;line-height:1.6">Prototype success state. In the live site this appears once the details reach a secure, confirmed destination.</p>
+<button type="button" onClick="{{again}}" style="height:46px;padding:0 20px;border:2px solid #2f6aa8;border-radius:6px;background:#ffffff;color:#2f6aa8;font:inherit;font-weight:600;font-size:16px;cursor:pointer">Register another person</button>
+</div>
+</sc-if>
+</div>
+
+</div>
+</section>
+</main>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false, mode: 'empty', searched: false };
+  }
+  renderVals() {
+    const m = this.state.mode;
+    const searched = this.state.searched;
+    let count = 'No open roles right now';
+    if (m === 'layout') count = searched ? 'Showing placeholder roles (search is not filtering yet)' : 'Showing placeholder roles';
+    else if (searched) count = 'No roles match your search';
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      showEmpty: m === 'empty',
+      showLayout: m === 'layout',
+      resultCount: count,
+      jobs: [{ id: 1 }, { id: 2 }, { id: 3 }],
+      pEmpty: m === 'empty' ? 'true' : 'false',
+      pLayout: m === 'layout' ? 'true' : 'false',
+      setEmpty: () => this.setState({ mode: 'empty' }),
+      setLayout: () => this.setState({ mode: 'layout' }),
+      onSearch: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ searched: true }); },
+      onSubmit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      again: () => this.setState({ sent: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

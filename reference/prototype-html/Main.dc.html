@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Sterling Workcare homepage</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&amp;family=Barlow+Semi+Condensed:ital,wght@0,600;0,700;1,700&amp;display=swap">
+<style>
+body{margin:0;font-family:'Barlow',system-ui,sans-serif;color:#44566a;background:#f3f5f8}
+a{color:#2f6aa8}
+a:hover{color:#0e2238}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8fb8e6;outline-offset:2px}
+.nav-link{color:#0e2238;text-decoration:none;font-weight:500;font-size:16px}
+.nav-link:hover{color:#2f6aa8;text-decoration:underline}
+.btn{text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.card-link:hover{border-color:#2f6aa8 !important}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+@media (max-width:860px){.nav-links{display:none !important}.show-sm{display:inline-flex !important}.hide-sm{display:none !important}}
+@media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s ease}.card-link{transition:border-color .15s ease}}
+</style>
+</helmet>
+<div style="width:100%;box-sizing:border-box">
+
+<div style="background:#fff4d6;color:#5a4300;font-size:14px;line-height:1.4;padding:10px 24px;text-align:center;border-bottom:1px solid #e8d08a">
+<strong>Prototype.</strong> Items in [square brackets] and “To confirm” tags need owner approval before launch. Nothing on this site sends or saves data yet.
+</div>
+
+<dc-import name="SiteHeader" current="none" hint-size="100%,112px"></dc-import>
+
+<main id="top">
+
+<section aria-roledescription="carousel" aria-label="Featured" style="background:#0e2238;color:#ffffff" onMouseEnter="{{hoverIn}}" onMouseLeave="{{hoverOut}}" onFocus="{{hoverIn}}" onBlur="{{hoverOut}}">
+<div style="max-width:1200px;margin:0 auto;padding:56px 24px 28px;box-sizing:border-box">
+
+<div role="group" aria-roledescription="slide" aria-label="{{slideLabel}}" aria-live="{{live}}" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center;min-height:400px">
+<div style="flex:1 1 460px;min-width:0">
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px">
+<span style="display:inline-block;background:#1d3f68;color:#d7e7f8;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;letter-spacing:.02em">{{slide.kicker}}</span>
+<span style="display:inline-block;background:#fff4d6;color:#5a4300;font-size:12px;font-weight:600;padding:5px 10px;border-radius:4px">To confirm: wording</span>
+</div>
+<h1 style="margin:0 0 18px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(38px,6vw,56px);line-height:1.05;color:#ffffff">{{slide.title}}</h1>
+<p style="margin:0 0 30px;font-size:20px;line-height:1.55;color:#c9d6e6;max-width:560px">{{slide.text}}</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="btn" href="{{slide.h1}}" style="background:#ffffff;color:#0e2238;font-weight:600;font-size:17px;padding:14px 24px;border-radius:6px">{{slide.c1}}</a>
+<a class="btn" href="{{slide.h2}}" style="background:transparent;color:#ffffff;font-weight:600;font-size:17px;padding:12px 24px;border-radius:6px;border:2px solid #6f8cae">{{slide.c2}}</a>
+</div>
+</div>
+<div style="flex:1 1 340px;min-width:0;min-height:320px;border-radius:10px;background:linear-gradient(135deg,#1d3f68 0%,#112b4a 100%);border:1px solid #2b4f7c;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:28px;box-sizing:border-box;text-align:center">
+<img src="/_blob/50dcbe04e61fa5a5f4aaafc15a33f6b0" alt="" style="height:130px;width:auto;opacity:.92">
+<span style="font-size:15px;line-height:1.45;color:#c9d6e6;max-width:260px">[Owner-approved photo goes here: {{slide.visual}}]</span>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px">
+<button type="button" onClick="{{prev}}" aria-label="Previous slide" style="width:48px;height:48px;border-radius:50%;border:2px solid #6f8cae;background:transparent;color:#ffffff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button>
+<button type="button" onClick="{{next}}" aria-label="Next slide" style="width:48px;height:48px;border-radius:50%;border:2px solid #6f8cae;background:transparent;color:#ffffff;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button>
+<div role="group" aria-label="Choose a slide" style="display:flex;align-items:center;margin-left:8px">
+<sc-for list="{{dots}}" as="dot" hint-placeholder-count="3">
+<button type="button" onClick="{{dot.select}}" aria-label="{{dot.label}}" aria-current="{{dot.current}}" style="width:44px;height:44px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0"><span style="display:block;height:12px;border-radius:6px;background:{{dot.bg}};width:{{dot.w}}"></span></button>
+</sc-for>
+</div>
+<button type="button" onClick="{{toggle}}" aria-label="{{toggleLabel}}" style="margin-left:auto;height:48px;padding:0 18px;border-radius:24px;border:2px solid #6f8cae;background:transparent;color:#ffffff;cursor:pointer;display:flex;align-items:center;gap:8px;font:inherit;font-size:15px;font-weight:600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{toggleIcon}}"></path></svg><span>{{toggleText}}</span></button>
+</div>
+</div>
+</section>
+
+<section style="background:#f3f5f8">
+<div style="max-width:1200px;margin:0 auto;padding:64px 24px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px">
+<a class="card-link" href="Candidates.dc.html" style="flex:1 1 420px;min-width:0;text-decoration:none;background:#ffffff;border:2px solid #d9e0e8;border-radius:10px;padding:32px;box-sizing:border-box;display:flex;gap:24px;align-items:flex-start">
+<span style="flex:none;width:64px;height:64px;border-radius:12px;background:#e6eef7;display:flex;align-items:center;justify-content:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></span>
+<span style="display:flex;flex-direction:column;gap:8px;min-width:0">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:28px;color:#0e2238">I’m looking for work</span>
+<span style="font-size:17px;line-height:1.55;color:#44566a">Driving, care or support work. Browse roles and register so we can contact you when something suits you.</span>
+<span style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:17px;color:#2f6aa8;margin-top:6px">See candidate services <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+</span>
+</a>
+<a class="card-link" href="Employers.dc.html" style="flex:1 1 420px;min-width:0;text-decoration:none;background:#ffffff;border:2px solid #d9e0e8;border-radius:10px;padding:32px;box-sizing:border-box;display:flex;gap:24px;align-items:flex-start">
+<span style="flex:none;width:64px;height:64px;border-radius:12px;background:#e6eef7;display:flex;align-items:center;justify-content:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+<span style="display:flex;flex-direction:column;gap:8px;min-width:0">
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:28px;color:#0e2238">I need staff</span>
+<span style="font-size:17px;line-height:1.55;color:#44566a">Drivers, care workers or support workers. Tell us the role, location and start date and we’ll confirm what we can supply.</span>
+<span style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:17px;color:#2f6aa8;margin-top:6px">See employer services <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+</span>
+</a>
+</div>
+</section>
+
+<section id="jobs" style="background:#f3f5f8">
+<div style="max-width:1200px;margin:0 auto;padding:48px 24px 72px;box-sizing:border-box">
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between;margin-bottom:16px">
+<h2 style="margin:0;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,40px);color:#0e2238">Latest jobs</h2>
+<a href="Drivers.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:17px">See all jobs <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+<p style="margin:0 0 24px;font-size:16px;line-height:1.5;color:#5a4300"><span style="display:inline-block;background:#fff4d6;font-size:12px;font-weight:600;padding:4px 10px;border-radius:4px;margin-right:8px">Layout preview</span>Placeholder roles only. The live site shows Sterling Workcare’s real, current vacancies, or an honest empty state.</p>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+<sc-for list="{{jobs}}" as="job" hint-placeholder-count="3">
+<li style="background:#ffffff;border:2px dashed #9aa9ba;border-radius:8px;padding:22px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:10px">
+<h3 style="margin:0;font-size:22px;color:#0e2238;font-weight:600">{{job.title}}</h3>
+<div style="display:flex;flex-wrap:wrap;gap:8px 20px;font-size:16px;color:#44566a">
+<span style="display:inline-flex;align-items:center;gap:6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>[Location]</span>
+<span>[Contract type]</span>
+<span>[Licence category]</span>
+<span>[Pay rate]</span>
+</div>
+</div>
+<a class="btn" href="Drivers.dc.html" style="background:#2f6aa8;color:#ffffff;font-weight:600;font-size:16px;padding:12px 22px;border-radius:6px">View job</a>
+</li>
+</sc-for>
+</ul>
+</div>
+</section>
+
+<section id="services" style="background:#ffffff;border-top:1px solid #d9e0e8;border-bottom:1px solid #d9e0e8">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;box-sizing:border-box">
+<h2 style="margin:0 0 12px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,40px);color:#0e2238">Staff for driving, care and support services</h2>
+<p style="margin:0 0 40px;font-size:18px;line-height:1.55;max-width:680px">Three sectors, one team. Each service is confirmed with the owner before it goes live.</p>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+
+<a class="card-link" href="DriverSupply.dc.html" style="flex:1 1 300px;min-width:0;text-decoration:none;background:#f3f5f8;border:2px solid #d9e0e8;border-radius:8px;padding:28px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+<span style="width:48px;height:48px;border-radius:8px;background:#e6eef7;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="6" width="14" height="10" rx="1"></rect><path d="M15 9h4l4 4v3h-8"></path><circle cx="6" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg></span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:26px;color:#0e2238">Driver hire</span>
+<span style="font-size:16px;line-height:1.55;color:#44566a">HGV, van and other drivers on temporary or permanent terms. [CONFIRM categories]</span>
+<span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;color:#2f6aa8">See driver hire <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+</a>
+
+<a class="card-link" href="CareWorkers.dc.html" style="flex:1 1 300px;min-width:0;text-decoration:none;background:#f3f5f8;border:2px solid #d9e0e8;border-radius:8px;padding:28px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+<span style="width:48px;height:48px;border-radius:8px;background:#e6eef7;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"></path></svg></span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:26px;color:#0e2238">Care workers</span>
+<span style="font-size:16px;line-height:1.55;color:#44566a">Care assistants and healthcare assistants for care homes and home care. [CONFIRM settings]</span>
+<span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;color:#2f6aa8">See care workers <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+</a>
+
+<a class="card-link" href="SupportWorkers.dc.html" style="flex:1 1 300px;min-width:0;text-decoration:none;background:#f3f5f8;border:2px solid #d9e0e8;border-radius:8px;padding:28px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+<span style="width:48px;height:48px;border-radius:8px;background:#e6eef7;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+<span style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:26px;color:#0e2238">Support workers</span>
+<span style="font-size:16px;line-height:1.55;color:#44566a">Support workers, seniors and team leaders for supported living and residential services. [CONFIRM]</span>
+<span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:16px;color:#2f6aa8">See support workers <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+</a>
+
+</div>
+<p style="margin:28px 0 0;font-size:17px"><a href="Services.dc.html" style="font-weight:600">All services</a> · <a href="Employers.dc.html" style="font-weight:600">Employer services</a> · <a href="Candidates.dc.html" style="font-weight:600">Candidate services</a></p>
+</div>
+</section>
+
+<section id="how" style="background:#f3f5f8">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;box-sizing:border-box">
+<h2 style="margin:0 0 12px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,40px);color:#0e2238">How it works</h2>
+<p style="margin:0 0 40px;font-size:18px;line-height:1.55;max-width:680px">One simple route for each side. Steps and timings need confirming with the owner.</p>
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+
+<div style="flex:1 1 420px;min-width:0;background:#ffffff;border:1px solid #d9e0e8;border-radius:10px;padding:32px;box-sizing:border-box">
+<h3 style="margin:0 0 20px;font-family:'Barlow Semi Condensed',sans-serif;font-size:26px;color:#0e2238">If you’re hiring</h3>
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px">
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#2f6aa8;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">1</span><span style="font-size:17px;line-height:1.5;padding-top:4px">Tell us the sector, role, location and start date.</span></li>
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#2f6aa8;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">2</span><span style="font-size:17px;line-height:1.5;padding-top:4px">A member of the team reviews the request.</span></li>
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#2f6aa8;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">3</span><span style="font-size:17px;line-height:1.5;padding-top:4px">We confirm which staff are available. [CONFIRM how staff are matched and checked]</span></li>
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#2f6aa8;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">4</span><span style="font-size:17px;line-height:1.5;padding-top:4px">Staff start on the agreed date.</span></li>
+</ol>
+<a class="btn" href="Contact.dc.html" style="display:inline-block;margin-top:26px;background:#2f6aa8;color:#ffffff;font-weight:600;font-size:17px;padding:13px 22px;border-radius:6px">Hire staff</a>
+</div>
+
+<div style="flex:1 1 420px;min-width:0;background:#ffffff;border:1px solid #d9e0e8;border-radius:10px;padding:32px;box-sizing:border-box">
+<h3 style="margin:0 0 20px;font-family:'Barlow Semi Condensed',sans-serif;font-size:26px;color:#0e2238">If you’re a candidate</h3>
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px">
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#0e2238;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">1</span><span style="font-size:17px;line-height:1.5;padding-top:4px">Browse roles or register your details and sector.</span></li>
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#0e2238;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">2</span><span style="font-size:17px;line-height:1.5;padding-top:4px">The team looks at your experience, documents and area. [CONFIRM checks]</span></li>
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#0e2238;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">3</span><span style="font-size:17px;line-height:1.5;padding-top:4px">If a role fits, we contact you.</span></li>
+<li style="display:flex;gap:16px;align-items:flex-start"><span style="flex:none;width:36px;height:36px;border-radius:50%;background:#0e2238;color:#ffffff;font-weight:600;display:flex;align-items:center;justify-content:center">4</span><span style="font-size:17px;line-height:1.5;padding-top:4px">You start work on the agreed date.</span></li>
+</ol>
+<a class="btn" href="Candidates.dc.html" style="display:inline-block;margin-top:26px;background:#0e2238;color:#ffffff;font-weight:600;font-size:17px;padding:13px 22px;border-radius:6px">Register as a candidate</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="trust" style="background:#ffffff;border-top:1px solid #d9e0e8">
+<div style="max-width:1200px;margin:0 auto;padding:80px 24px;box-sizing:border-box">
+<h2 style="margin:0 0 12px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,40px);color:#0e2238">Why work with Sterling Workcare</h2>
+<p style="margin:0 0 36px;font-size:18px;line-height:1.55;max-width:700px">Proof goes here once it’s real. Every figure, logo and quote below is a slot waiting for the owner’s verified information.</p>
+
+<ul style="list-style:none;margin:0 0 36px;padding:0;display:flex;flex-wrap:wrap;gap:14px 32px;font-size:18px;line-height:1.5">
+<li style="flex:1 1 300px;display:flex;gap:12px;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg>Responsive staffing support [CONFIRM]</li>
+<li style="flex:1 1 300px;display:flex;gap:12px;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg>Temporary and permanent recruitment, where offered [CONFIRM]</li>
+<li style="flex:1 1 300px;display:flex;gap:12px;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg>Candidate screening and role-specific checks [CONFIRM which checks]</li>
+<li style="flex:1 1 300px;display:flex;gap:12px;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f6aa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg>A local point of contact for employers and candidates [CONFIRM]</li>
+</ul>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;margin-bottom:28px">
+<div style="flex:1 1 220px;min-width:0;border:2px dashed #9aa9ba;border-radius:8px;padding:24px;box-sizing:border-box;background:#f3f5f8"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:40px;color:#0e2238">[ number ]</div><div style="font-size:16px;line-height:1.5">staff placed. Verified figure only.</div></div>
+<div style="flex:1 1 220px;min-width:0;border:2px dashed #9aa9ba;border-radius:8px;padding:24px;box-sizing:border-box;background:#f3f5f8"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:40px;color:#0e2238">[ number ]</div><div style="font-size:16px;line-height:1.5">businesses supported. Verified figure only.</div></div>
+<div style="flex:1 1 220px;min-width:0;border:2px dashed #9aa9ba;border-radius:8px;padding:24px;box-sizing:border-box;background:#f3f5f8"><div style="font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:40px;color:#0e2238">[ number ]</div><div style="font-size:16px;line-height:1.5">open roles right now. Pulled from real vacancies.</div></div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;align-items:stretch">
+<div style="flex:1 1 420px;min-width:0;border:2px dashed #9aa9ba;border-radius:8px;padding:24px;box-sizing:border-box;background:#f3f5f8">
+<div style="font-weight:600;font-size:18px;color:#0e2238;margin-bottom:8px">Client testimonial</div>
+<p style="margin:0;font-size:16px;line-height:1.6">[Only with the client’s written permission. No invented quotes.]</p>
+</div>
+<div style="flex:1 1 420px;min-width:0;border:2px dashed #9aa9ba;border-radius:8px;padding:24px;box-sizing:border-box;background:#f3f5f8">
+<div style="font-weight:600;font-size:18px;color:#0e2238;margin-bottom:12px">Accreditations and memberships</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<span style="width:96px;height:56px;border:1px solid #9aa9ba;border-radius:6px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px">[ logo ]</span>
+<span style="width:96px;height:56px;border:1px solid #9aa9ba;border-radius:6px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px">[ logo ]</span>
+<span style="width:96px;height:56px;border:1px solid #9aa9ba;border-radius:6px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px">[ logo ]</span>
+<span style="width:96px;height:56px;border:1px solid #9aa9ba;border-radius:6px;background:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px">[ logo ]</span>
+</div>
+<p style="margin:12px 0 0;font-size:14px;line-height:1.5">Only memberships Sterling Workcare actually holds and can show evidence for.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="areas" style="background:#f3f5f8">
+<div style="max-width:1200px;margin:0 auto;padding:72px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+<div style="flex:1 1 360px;min-width:0">
+<span style="display:inline-block;background:#fff4d6;color:#5a4300;font-size:12px;font-weight:600;padding:4px 10px;border-radius:4px;margin-bottom:14px">To confirm</span>
+<h2 style="margin:0 0 12px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,40px);color:#0e2238">Where we work</h2>
+<p style="margin:0 0 20px;font-size:18px;line-height:1.6">Proposed starting area: Birmingham and the West Midlands. [CONFIRM SERVICE AREA: local, regional or national, and which regions.] No office or location will be shown unless it’s real.</p>
+<a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:17px">Contact the team <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+</div>
+<div style="flex:1 1 400px;min-width:0;border:2px dashed #9aa9ba;border-radius:8px;padding:24px;box-sizing:border-box;background:#ffffff;display:flex;flex-wrap:wrap;gap:10px">
+<span style="border:1px solid #9aa9ba;border-radius:999px;padding:6px 14px;font-size:16px">Birmingham [CONFIRM]</span>
+<span style="border:1px solid #9aa9ba;border-radius:999px;padding:6px 14px;font-size:16px">West Midlands [CONFIRM]</span>
+<span style="border:1px solid #9aa9ba;border-radius:999px;padding:6px 14px;font-size:16px">[Region]</span>
+<span style="border:1px solid #9aa9ba;border-radius:999px;padding:6px 14px;font-size:16px">[Region]</span>
+<span style="border:1px solid #9aa9ba;border-radius:999px;padding:6px 14px;font-size:16px">[Region]</span>
+<span style="border:1px solid #9aa9ba;border-radius:999px;padding:6px 14px;font-size:16px">[Region]</span>
+</div>
+</div>
+</section>
+
+<section id="faq" style="background:#ffffff;border-top:1px solid #d9e0e8">
+<div style="max-width:860px;margin:0 auto;padding:80px 24px;box-sizing:border-box">
+<h2 style="margin:0 0 32px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(30px,5vw,40px);color:#0e2238">Common questions</h2>
+<div style="display:flex;flex-direction:column;border-top:1px solid #d9e0e8">
+<details style="border-bottom:1px solid #d9e0e8;padding:20px 0">
+<summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:19px;color:#0e2238">What should I include when I request staff?<span aria-hidden="true" style="color:#2f6aa8;font-size:24px;line-height:1">+</span></summary>
+<p style="margin:14px 0 0;font-size:17px;line-height:1.6">The sector and role (and licence category for drivers), how many staff, the work location, your start date and how long you need cover. Anything else you add helps us respond properly.</p>
+</details>
+<details style="border-bottom:1px solid #d9e0e8;padding:20px 0">
+<summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:19px;color:#0e2238">Which driver licence categories do you cover?<span aria-hidden="true" style="color:#2f6aa8;font-size:24px;line-height:1">+</span></summary>
+<p style="margin:14px 0 0;font-size:17px;line-height:1.6">[CONFIRM: for example HGV Class 1 (C+E), Class 2 (C), 7.5-tonne, van. Care and support roles are listed on their own pages.]</p>
+</details>
+<details style="border-bottom:1px solid #d9e0e8;padding:20px 0">
+<summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:19px;color:#0e2238">Is it free for drivers to register?<span aria-hidden="true" style="color:#2f6aa8;font-size:24px;line-height:1">+</span></summary>
+<p style="margin:14px 0 0;font-size:17px;line-height:1.6">[CONFIRM before publishing. Do not state this until the owner agrees.]</p>
+</details>
+<details style="border-bottom:1px solid #d9e0e8;padding:20px 0">
+<summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:19px;color:#0e2238">How quickly will I hear back?<span aria-hidden="true" style="color:#2f6aa8;font-size:24px;line-height:1">+</span></summary>
+<p style="margin:14px 0 0;font-size:17px;line-height:1.6">[CONFIRM a real response time. No promise is made until the owner agrees one.]</p>
+</details>
+</div>
+</div>
+</section>
+
+<section style="background:#0e2238;color:#ffffff">
+<div style="max-width:1200px;margin:0 auto;padding:64px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+<div style="flex:1 1 420px;min-width:0">
+<h2 style="margin:0 0 10px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:clamp(28px,4.5vw,36px);color:#ffffff">Ready to get started?</h2>
+<p style="margin:0;font-size:18px;line-height:1.55;color:#c9d6e6">Looking for work, or looking for staff? Pick your route.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="btn" href="Candidates.dc.html" style="background:#ffffff;color:#0e2238;font-weight:600;font-size:17px;padding:14px 26px;border-radius:6px">Register for work</a>
+<a class="btn" href="Contact.dc.html" style="background:transparent;color:#ffffff;font-weight:600;font-size:17px;padding:12px 26px;border-radius:6px;border:2px solid #6f8cae">Hire staff</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2f6aa8","options":["#2f6aa8","#1f6f8b","#35629a"]},"$preview":{"width":1440,"height":3900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { index: 0, playing: true };
+    this.paused = false;
+    this.timer = null;
+  }
+  componentDidMount() {
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        this.setState({ playing: false });
+      }
+    } catch (e) {}
+    this.timer = setInterval(() => {
+      if (this.state.playing && !this.paused) {
+        this.setState({ index: (this.state.index + 1) % 3 });
+      }
+    }, 7000);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  renderVals() {
+    const slides = [
+      { kicker: 'For employers', title: 'Staff when you need them', text: 'Your staffing partner for driving, care and support services across Birmingham and the West Midlands. [CONFIRM service area and offer]', c1: 'Hire staff', h1: 'Contact.dc.html', c2: 'Employer services', h2: 'Employers.dc.html', visual: 'a team at work' },
+      { kicker: 'For candidates', title: 'Find your next role', text: 'Register with Sterling Workcare and hear about driving, care and support roles that match your experience and where you want to work.', c1: 'Register for work', h1: 'Candidates.dc.html', c2: 'Browse jobs', h2: 'Drivers.dc.html', visual: 'a care worker or driver on shift' },
+      { kicker: 'Our services', title: 'Driving, care and support', text: 'Driver hire, care workers and support workers, each with its own page. Services shown here are To confirm until the owner approves them.', c1: 'See all services', h1: 'Services.dc.html', c2: 'Contact the team', h2: 'Contact.dc.html', visual: 'the Sterling Workcare team' }
+    ];
+    const i = this.state.index;
+    const playing = this.state.playing;
+    const goto = (n) => () => this.setState({ index: ((n % 3) + 3) % 3 });
+    const dots = slides.map((s, n) => ({
+      label: 'Slide ' + (n + 1) + ' of 3',
+      current: n === i ? 'true' : undefined,
+      bg: n === i ? '#ffffff' : '#6f8cae',
+      w: n === i ? '28px' : '12px',
+      select: goto(n)
+    }));
+    const jobs = [{ title: '[Job title]' }, { title: '[Job title]' }, { title: '[Job title]' }];
+    return {
+      slide: slides[i],
+      slideLabel: (i + 1) + ' of 3',
+      live: playing ? 'off' : 'polite',
+      dots,
+      jobs,
+      prev: goto(i - 1),
+      next: goto(i + 1),
+      toggle: () => this.setState({ playing: !this.state.playing }),
+      toggleLabel: playing ? 'Pause automatic slide rotation' : 'Start automatic slide rotation',
+      toggleText: playing ? 'Pause' : 'Play',
+      toggleIcon: playing ? 'M8 5v14M16 5v14' : 'M7 4v16l13-8z',
+      hoverIn: () => { this.paused = true; },
+      hoverOut: () => { this.paused = false; }
+    };
+  }
+}
+</script>
+</body>
+</html>

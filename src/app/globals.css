@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0e2238;
+  --color-accent: #2f6aa8;
+  --color-accent-dark: #25557f;
+  --color-surface: #f3f5f8;
+  --color-slate: #44566a;
+  --color-border: #d9e0e8;
+  --color-border-strong: #8494a7;
+  --color-tint: #e6eef7;
+  --color-focus: #8fb8e6;
+  --color-danger: #b3261e;
+  --color-confirm-bg: #fff4d6;
+  --color-confirm-text: #5a4300;
+  --color-on-navy: #c9d6e6;
+  --font-sans: var(--font-barlow), system-ui, sans-serif;
+  --font-display: var(--font-barlow-condensed), var(--font-barlow), system-ui, sans-serif;
+}
+
+/* Base styles live in a layer so Tailwind utilities (for example text-white on links) can override them. */
+@layer base {
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background: var(--color-surface);
+    color: var(--color-slate);
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: var(--color-accent);
+  }
+  a:hover {
+    color: var(--color-navy);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
